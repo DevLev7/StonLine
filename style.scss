@@ -742,7 +742,7 @@ main{
                 .main__block__text{
                     .main__block__title{
                         h1{
-                            @include font('Spectral SC',50px,64px,$base ,600 );
+                            @include font('Spectral SC',48px,64px,$base ,600 );
                         }
                         .style_text{
                             font-size: 28px;
