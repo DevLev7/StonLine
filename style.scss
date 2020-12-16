@@ -39,6 +39,39 @@ $beige:#DDD4CF;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Spectral SC';
+    src: url('fonts/SpectralSC-Regular.eot');
+    src: local('fonts/Spectral SC Regular'), local('SpectralSC-Regular'),
+        url('fonts/SpectralSC-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/SpectralSC-Regular.woff') format('woff'),
+        url('fonts/SpectralSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spectral SC';
+    src: url('fonts/SpectralSC-Bold.eot');
+    src: local('fonts/Spectral SC Bold'), local('SpectralSC-Bold'),
+        url('fonts/SpectralSC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/SpectralSC-Bold.woff') format('woff'),
+        url('fonts/SpectralSC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosTextWebRegular';
+	src: url('fonts/Golos%20Text_Regular.eot');
+	src:
+	     url('fonts/Golos%20Text_Regular.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Golos%20Text_Regular.woff2') format('woff2'),
+	     url('fonts/Golos%20Text_Regular.woff') format('woff'),
+	     url('fonts/Golos%20Text_Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 
 h1,h2,h3,h4,h5,h6,p{
@@ -48,7 +81,7 @@ h1,h2,h3,h4,h5,h6,p{
 body{
     margin: 0;
     @include font('Gilroy',20px,27px,$base ,400 );
-    max-width: 1920px;
+    max-width: 2560px;
     -webkit-font-smoothing:antialiased;
     
     
@@ -74,7 +107,7 @@ body{
 }
 
 .wrapper{
-    padding: 0 (256/1920)*100%;
+    padding: 0 20%;
 }
 
 a{
@@ -123,8 +156,8 @@ a{
 main{
     width: 100%;
     height: auto;
-    background: url(img/main_bg.png) no-repeat center;
-    background-size: cover;
+    background: url(img/bg_2650.png) no-repeat;
+    
     header{
         @include font('Gilroy',16px,21px,$base ,400 );
         padding-top: 9px;
@@ -212,15 +245,15 @@ main{
     .main__block{
         margin-top: 100px;
         .main__block__text{
-            width: 40%;
+            width: 45%;
             .main__block__title{
                 margin-bottom: 44px;
                 h1{
-                    @include font('Gilroy',56px,64px,$base ,600 );
+                    @include font('Spectral SC',56px,64px,$base ,600 );
                 }
                 .style_text{
                     font-size: 32px;
-                    margin-left: 40px;
+                    margin-left: 20px;
                 }
                 
             }
@@ -250,33 +283,6 @@ main{
                         top: 3px;
                     }
                 }
-                .rest2{
-                    position: relative;
-                    z-index: 2;
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        z-index: -1;
-                        width: 44px;
-                        height: 17px;
-                        border-radius: 8px;
-                        background-color: #DDD4CF;
-                        left: -20px;
-                        top: -8px;
-                    }
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        z-index: -1;
-                        width: 44px;
-                        height: 17px;
-                        border-radius: 8px;
-                        background-color: #DDD4CF;
-                        left: -19px;
-                        bottom: -22px;
-
-                    }
-                }
                 
             }
             .main__block__button{
@@ -286,8 +292,9 @@ main{
             
         }
         .main__block__navigation{
+            margin-top: 87px;
             width: 54%;
-            margin-left: (146/1920)*100%;
+            
             nav{
                 .nav-link{
                     position: relative;
@@ -317,7 +324,7 @@ main{
                         right: 51px;
                         h2{
                             
-                            @include font('Gilroy',83px,111px,#DDD4CF ,400 );
+                            @include font('GolosTextWebRegular',83px,111px,#DDD4CF ,400 );
                         }
                    }
                 }
@@ -328,11 +335,13 @@ main{
         }
     }
     .arm{
-        margin-left: -90px;
+        margin-left: -9px;
         margin-top: -300px;
         background: url(img/рука.png);
         height: 700px;
         width: 800px;
+        z-index: 100;
+        
     }
     .animate__animated.animate__fadeInTopLeft{
         --animate-duration: 4s;
@@ -340,12 +349,13 @@ main{
     }
     
 .about{
+    margin-top: -200px;
     .about_content{
         margin: 0 0 46.9px 0;
         .about_content-title{
             text-align: center;
             padding: 0 0 73px 0;
-            @include font('Gilroy', 40px, 64px, $black, 700)
+            @include font('Spectral SC', 40px, 64px, $black, 700)
         }
         .about_content-form{
             display: grid;
@@ -465,8 +475,7 @@ main{
 }
 
 .product{
-    background: url(img/product/product_BG.svg) no-repeat center;
-    background-size: cover;
+    background: url(img/product/product_BG2560.svg) no-repeat center;
     .product_content{
         padding: 0 80px;
         .product_content-more{
@@ -490,12 +499,12 @@ main{
             }
         }
         .product_content-title{
-            @include font('Gilroy', 40px, 48px, $black, 700);
+            @include font('Spectral SC', 40px, 48px, $black, 700);
             padding: 64.1px 0 8px 0;
             text-align: center;
         }
         .product_content-subtitle{
-            @include font('Gilroy', 24px, 54px, $black, 700);
+            @include font('Spectral SC', 24px, 54px, $black, 700);
             padding: 0 0 37px 0;
             text-align: center;
         }
@@ -570,6 +579,23 @@ main{
 }
     
     //adaptetion
+    @media(max-width: 1920px){
+        .wrapper{
+            padding: 0 13%;
+        }
+        main{
+            background: url(img/main_bg.png) no-repeat;
+            
+    }
+        .about{
+            margin-top: -180px;
+        }
+        .product{
+            background: url(img/product/product_BG1920.svg) no-repeat center;
+        }
+    }
+    
+    
     
     @media(max-width: 1800px){
         main{
@@ -582,17 +608,17 @@ main{
                 .main__block__text{
                     .main__block__title{
                         h1{
-                            @include font('Gilroy',52px,64px,$base ,600 );
+                            @include font('Spectral SC',52px,64px,$base ,600 );
                         }
                         .style_text{
                             font-size: 31px;
-                            margin-left: 30px;
+                            margin-left: 10px;
                         }
                         
                     }
                 }
                 .main__block__navigation{
-                    margin-left: (100/1920)*100%;
+                    
                     nav{
                         .nav-link{
                             background-size: 120%;
@@ -605,7 +631,7 @@ main{
                            .nav-link__number{  
                                 bottom: -8%;
                                 h2{
-                                    @include font('Gilroy',81px,111px,#DDD4CF ,400 );
+                                    @include font('GolosTextWebRegular',81px,111px,#DDD4CF ,400 );
                                 }
                            }
                         }
@@ -716,16 +742,17 @@ main{
                 .main__block__text{
                     .main__block__title{
                         h1{
-                            @include font('Gilroy',50px,64px,$base ,600 );
+                            @include font('Spectral SC',50px,64px,$base ,600 );
                         }
                         .style_text{
                             font-size: 28px;
-                            margin-left: 28px;
+                            
                         }
                         
                     }
                 }
                 .main__block__navigation{
+                    margin-top: 103px;
                     nav{
                         .nav-link{
                            .nav-link__title{
@@ -739,12 +766,17 @@ main{
                            .nav-link__number{  
                                 bottom: -6%;
                                 h2{
-                                    @include font('Gilroy',78px,111px,#DDD4CF ,400 );
+                                    @include font('GolosTextWebRegular',78px,111px,#DDD4CF ,400 );
                                 }
                            }
                         }
                     }
                 }
+            }
+            .arm{
+                
+                margin-top: -233px;
+                
             }
             }
         .about{
@@ -782,7 +814,7 @@ main{
                 .about_content-title{
                     text-align: center;
                     padding: 0 0 73px 0;
-                    @include font('Gilroy', 40px, 64px, $black, 700)
+                    @include font('Spectral SC', 40px, 64px, $black, 700)
                 }
                 .about_content-form{
                     display: grid;
@@ -811,12 +843,8 @@ main{
         main{
             header{
                 .header-inner{
-                    grid-template-columns:5fr 1.7fr 0.3fr 0.3fr 0.3fr 1.5fr ; 
-                    a.header__email{
-                        .header__email__link{
-                            display: none
-                        }
-                    }
+                    grid-template-columns:5fr 1.7fr 1.5fr 0.3fr 0.3fr 1.5fr ; 
+                    grid-column-gap: 15px;
                     
                     }
                     
@@ -824,17 +852,19 @@ main{
             .main__block{
                 .main__block__text{
                     .main__block__title{
+                        margin-bottom: 35px;
                         h1{
-                            @include font('Gilroy',45px,64px,$base ,600 );
+                            @include font('Spectral SC',46px,58px,$base ,600 );
                         }
                         .style_text{
                             font-size: 25px;
-                            margin-left: 15px;
+                            margin-left: 5px;
                         }
                         
                     }
                 }
                 .main__block__navigation{
+                    margin-top: 116px;
                     nav{
                         .nav-link{
                            .nav-link__title{
@@ -848,7 +878,7 @@ main{
                            .nav-link__number{  
                                 bottom: -2%;
                                 h2{
-                                    @include font('Gilroy',65px,111px,#DDD4CF ,400 );
+                                    @include font('GolosTextWebRegular',65px,111px,#DDD4CF ,400 );
                                 }
                            }
                         }
@@ -877,13 +907,23 @@ main{
             padding: 0 (150/1920)*100%;
         }
         main{
+            header{
+                .header-inner{
+                    grid-template-columns:5fr 0.3fr 1.5fr 0.3fr 0.3fr 1.5fr ; 
+                    a.header__location{
+                        .header__location__text{
+                          display: none;
+                        }
+                    }
+                    }
+                    
+                }
             .arm{
                 margin-left: -60px;
                 margin-top: -200px;
                 background: url(img/рука.png) no-repeat;
-                background-size: 90%;
-                height: 700px;
-                width: 800px;
+                
+
             }
         }
         
@@ -911,7 +951,7 @@ main{
                     margin: 0 30px 0 30px;
                     .form_product{
                         .form_product-title{
-                            @include font('Gilroy', 18px, 27px, $black, 700)
+                            @include font('GSpectral SC', 18px, 27px, $black, 700)
                         }
                     }
                 }
@@ -971,6 +1011,44 @@ main{
     }
     
     @media(max-width: 1280px){
+        main{
+            .main__block{
+                .main__block__text{
+                    .main__block__title{
+                        margin-bottom: 32px;
+                        h1{
+                            @include font('Spectral SC',43px,55px,$base ,600 );
+                        }
+                    }
+                }
+                .main__block__navigation{
+                    nav{
+                        .nav-link{
+                           .nav-link__title{
+                                top: 70px;
+                                left: 70px;
+                                h6{
+                                    @include font('Gilroy',14px,21px,#B3998B ,400 );
+                                }
+
+                           } 
+                           .nav-link__number{  
+                                bottom: -2%;
+                                h2{
+                                    @include font('GolosTextWebRegular',65px,111px,#DDD4CF ,400 );
+                                }
+                           }
+                        }
+                    }
+                }
+            }
+            .arm{
+                margin-left: -29px;
+                margin-top: -162px;
+                background: url(img/рука.png) no-repeat;
+                
+            }
+            }
         .about{
             .about_content{
                 .about_content-form {
@@ -997,6 +1075,8 @@ main{
     
     @media(max-width: 1024px){
         main{
+            background: url(img/фон.png) no-repeat;
+            
             header{
                 .header-inner{
                     grid-template-columns:5fr 0.3fr 0.3fr 0.3fr 0.3fr 1.5fr ; 
@@ -1005,11 +1085,7 @@ main{
                         .header__logo__text{
                             @include font('Gilroy',14px,21px,$base ,400 );
                         }}
-                    a.header__location{
-                        .header__location__text{
-                          display: none;
-                        }
-                    }
+                    
                     
                     }
                     
@@ -1020,11 +1096,11 @@ main{
                         .main__block__title{
                             margin-bottom: 20px;
                             h1{
-                                @include font('Gilroy',38px,40px,$base ,600 );
+                                @include font('Spectral SC',34px,40px,$base ,600 );
                             }
                             .style_text{
                                 font-size: 20px;
-                                margin-left: 10px;
+                                margin-left: 1px;
                             }
                             
                         }
@@ -1036,7 +1112,7 @@ main{
                         }
                     }
                     .main__block__navigation{
-                        margin-left: (60/1920)*100%;
+                        margin-top: 78px;
                         nav{
                             .nav-link{
                                .nav-link__title{
@@ -1051,7 +1127,7 @@ main{
                                     bottom: 12%;
                                     right: 49px;
                                     h2{
-                                        @include font('Gilroy',50px,111px,#DDD4CF ,400 );
+                                        @include font('GolosTextWebRegular',50px,111px,#DDD4CF ,400 );
                                     }
                                }
                             }
@@ -1065,12 +1141,13 @@ main{
                     margin-left: -13px;
                     margin-top: -118px;
                     
-                    background-size: 70%;
+                    background-size: 90%;
                    
                 }
             
             }
         .about{
+            margin-top: -275px;
             .about_content{
                 margin: 0 75px 46.9px 75px;
                 .about_content-title{
@@ -1083,12 +1160,15 @@ main{
             } 
         } 
         .product {
+            background: url(img/product/product_BG1024.svg);
             .product_content{
                 .product_content-title {
-                    padding: 10.1px 0 0px 0;
+                    padding: 0;
+                    @include font('Spectral SC',40px,40px,$base ,600 );
                 }
                 .product_content-subtitle{
-                    padding: 0 0 70px 0;
+                    padding: 0 0 45px 0;
+                    @include font('Spectral SC',21px,34px,$base ,600 );
                 }
                 .product_content-form {
                     grid-template-columns: repeat(2, 350px);
@@ -1116,6 +1196,7 @@ main{
     
     @media(max-width: 771px){
         main{
+            background: url(img/bg_771.png) no-repeat;
             header{
                 .header-inner{
                     grid-template-columns:1.5fr 0.3fr 0.3fr 0.3fr 0.3fr 1.5fr ; 
@@ -1124,23 +1205,26 @@ main{
                         .header__logo__text{
                             display: none;
                         }}
-                    
-                    
+                    a.header__email{  
+                        .header__email__link{
+                            display: none;
+                        }
                     }
                     
                 }
-            
+                    }
+
                 .main__block{
                     margin-top: 50px;
                     .main__block__text{
                         .main__block__title{
                             margin-bottom: 20px;
                             h1{
-                                @include font('Gilroy',28px,35px,$base ,600 );
+                                @include font('Spectral SC',26px,35px,$base ,600 );
                             }
                             .style_text{
-                                font-size: 18px;
-                                margin-left: 5px;
+                                font-size: 17px;
+                                margin-left: 3px;
                             }
                             
                         }
@@ -1158,6 +1242,7 @@ main{
                         }
                     }
                     .main__block__navigation{
+                        margin-top: 63px;
                         nav{
                             .nav-link{
                                .nav-link__title{
@@ -1172,7 +1257,7 @@ main{
                                     bottom: 27%;
                                     right: 49px;
                                     h2{
-                                        @include font('Gilroy',47px,111px,#DDD4CF ,400 );
+                                        @include font('GolosTextWebRegular',47px,111px,#DDD4CF ,400 );
                                     }
                                }
                             }
@@ -1203,12 +1288,14 @@ main{
                 } 
             } 
             .product {
+                background: url(img/product/product_BG771.svg) no-repeat;
                 .product_content{
                     .product_content-title {
-                        padding: 10.1px 0 0px 0;
+                        @include font('Spectral SC',32px,32px,$base ,600 );
                     }
                     .product_content-subtitle{
-                        padding: 0 0 70px 0;
+                        padding: 0 0 35px 0;
+                        @include font('Spectral SC',16px,15px,$base ,600 );
                     }
                     .product_content-form {
                         grid-template-columns: repeat(2, 303px);
@@ -1236,6 +1323,7 @@ main{
     
     @media(max-width: 500px){
         main{
+            background: url(img/bg_500.png) no-repeat;
             header{
                 .header-inner{
                     grid-template-columns:1.5fr   1fr ; 
@@ -1265,21 +1353,22 @@ main{
                         .main__block__title{
                             margin-bottom: 20px;
                             h1{
-                                @include font('Gilroy',30px,33px,$base ,600 );
+                                @include font('Spectral SC',24px,30px,$base ,600 );
                             }
                             .style_text{
-                                font-size: 16px;
-                                margin-left: 5px;
+                                font-size: 15px;
+                                margin-left: 3px;
                             }
                             
                         }
                         .main__block__subtitle{
                             h5{
-                                @include font('Gilroy',18px,25px,$base ,400 );
+                                @include font('Gilroy',16px,25px,$base ,400 );
                                 margin-bottom: 10px;
                             }
                         }
                         .main__block__button{
+                            margin-top: 39px;
                             .btn-main{
                                 @include font('Gilroy',16px,25px,$white ,400 );
                                 padding: 15px 19px 15px 19px;
@@ -1314,22 +1403,21 @@ main{
                     }
                 }
                 .arm{
-                    margin-left: -50px;
-                    margin-top: -90px;
-                    
-                    
+                    margin-left: -30px;
+                    margin-top: -107px;
+                    background-size: 60%;
 
                 }
             
             }
-        .about{
-            margin: -105px 0 0 0;
+        .about{      
+            margin-top: -390px;
             .wrapper{
                 padding: 0 (4/500)*100%;
             }
             .about_content{
                 .about_content-title{
-                    @include font('Gilroy', 33px, 20px, $black, 700);
+                    @include font('Spectral SC', 33px, 20px, $black, 700);
                 }
                 .about_content-form {
                     grid-template-columns: repeat(2, 240px);
@@ -1339,15 +1427,16 @@ main{
             } 
         }
         .product {
-            background: #F3F0EF;
+            background: url(img/product/product_BG550.svg) no-repeat;
+            background-size: cover;
             .product_content{
                 .product_content-title {
-                    @include font('Gilroy', 30px, 40px, $black, 700);
-                    padding: 10.1px 0 0px 0;
+                    @include font('Spectral SC', 20px, 18px, $black, 700);
+                    
                 }
                 .product_content-subtitle{
-                    @include font('Gilroy', 22px, 30px, $black, 700);
-                    padding: 0 0 70px 0;
+                    @include font('Spectral SC', 12px, 13px, $black, 700);
+                    padding: 0 0 30px 0;
                 }
                 .product_content-form {
                     grid-template-columns: repeat(1, 303px);
@@ -1363,8 +1452,9 @@ main{
     }
     
     
-    @media(max-width: 320px){
+    @media(max-width: 361px){
         main{
+            background: url(img/bg_360.png) no-repeat;
             header{
                 .header-inner{
                     grid-template-columns:1.5fr 0.3fr ; 
@@ -1390,7 +1480,7 @@ main{
                         width: 58%;
                         .main__block__title{
                             h1{
-                                @include font('Gilroy',17px,18px,$base ,600 );
+                                @include font('Spectral SC',15px,22px,$base ,600 );
                             }
                             .style_text{
                                 font-size: 10px;
@@ -1402,7 +1492,7 @@ main{
                            
                             h5{
                                 margin-left: 5px;
-                                @include font('Gilroy',13px,20px,$base ,400 );
+                                @include font('Gilroy',12px,20px,$base ,400 );
 
                             }
                         }
@@ -1420,17 +1510,23 @@ main{
 
                     }
                 }
- 
+        .arm{
+            margin-left: -30px;
+            margin-top: -76px;
+            background-size: 40%;
+
+        }
     }
     
-    .about{
-        margin: -120px 0 0 0;
+    .about{   
+        margin-top: -470px;
         .wrapper{
-            padding: 0 (2/320)*100%;
+            padding: 0 5.625%;
         }
         .about_content{
+            margin: 0 0px 20.9px 0px;
             .about_content-title{
-                @include font('Gilroy', 24px, 32px, $black, 700);
+                @include font('Spectral SC', 18px, 27px, $black, 700);
                 padding: 0 0 20px 0;
             }
             .about_content-form {
@@ -1443,18 +1539,18 @@ main{
         } 
     } 
     .product {
+        background: url(img/product/product_BG360.svg) no-repeat;
         .wrapper{
-            padding: 0 (2/320)*100%;
+            padding: 0 6.625%;
         }
         .product_content{
             padding: 0 0px;
             margin: 0 0 0 0px;
             .product_content-title {
-                @include font('Gilroy', 24px, 32px, $black, 700);
-                padding: 10.1px 0 0px 0;
+                @include font('Spectral SC', 18px, 27px, $black, 700);
             }
             .product_content-subtitle{
-                @include font('Gilroy', 18px, 26px, $black, 700);
+                @include font('Spectral SC', 15px, 22px, $black, 700);
                 padding: 0 0 30px 0;
             }
             .product_content-form {
