@@ -1,0 +1,106 @@
+include mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+        script(src="script/wow.min.js")
+        script(src="script/app.js")
+        title STONLine
+    body
+        main
+            header
+                .wrapper
+                    .header-inner
+                        .header__logo.flex
+                            .header__logo__img
+                                img(src="img/лого.svg", alt="")
+                            .header__logo__text
+                                p Производство мебели и деталей интерьера <br> из искусственного камня
+                        a.header__location.flex
+                            .header__location__icon
+                                include img/location-pin.svg
+                            .header__location__text
+                                p Москва и<br> Московская область
+                        a.header__email.flex
+                            .header__email__icon
+                                include img/email.svg
+                            .header__email__link
+                                p info@stonline.ru
+                        a.header__tg
+                            include img/tg.svg
+                        a.header__wt
+                            include img/wa.svg
+                        a.header__phone
+                            .header__phone__icon.m-1920
+                                include img/phone.svg
+                            .header__phone__icon.m-320
+                                include img/phone320.svg
+                            .header__phone__call
+                                p Заказать звонок
+            .main__block
+                .wrapper
+                    .main__block__inner.flex
+                        .main__block__text
+                            .main__block__title
+                                h1 Красивая мебель  из <span class="text_color"> искусственного камня </span> <span class="style_text"> по вашим эскизам </span>
+                            .main__block__subtitle
+                                h5.rest Дешевле салонов – <span> разница до 30% </span>
+                                h5.rest2 <span>1 000+ материалов</span> от мировых производителей из Кореи, США и Китая
+                            .main__block__button
+                                button.btn-main <span> Расчитать стоимость </span>
+                        .main__block__navigation
+                            nav.flex
+                                .nav-link
+                                    .nav-link__title
+                                        h6 Замерим
+                                    .nav-link__number
+                                        h2 1
+                                .nav-link.second
+                                    .nav-link__title
+                                        h6 Изготовим
+                                    .nav-link__number
+                                        h2 2
+                                .nav-link.second
+                                    .nav-link__title
+                                        h6 Доставим
+                                    .nav-link__number
+                                        h2 3
+                                .nav-link.second
+                                    .nav-link__title
+                                        h6 Установим
+                                    .nav-link__number
+                                        h2 4
+            .arm.wow.animate__animated.animate__fadeInTopLeft
+        .about
+            .wrapper
+                .about_content
+                    .about_content-title Почему нас <span class="text_color">выбирают
+                    .about_content-form
+                        +form_intro('Выезд замерщика – бесплатно', 'В удобное для вас время – ни к чему не обязывает')
+                        +form_intro('Собственное производство', 'Без посредников – дешевле, чем в салонах')
+                        +form_intro('Не тратим деньги на офис', 'Экономим ваше время и бюджет. Сразу начинаем производство')
+                        +form_intro('Стаж работы – от 10 лет', 'Наши специалисты уже реализовали 2 800+ проектов')
+                        +form_intro('Личный менеджер', 'Закреплен за каждым клиентом и всегда на связи')
+                        +form_intro('Сжатые сроки', 'Выполним срочный заказ за 3 рабочих дня')
+                        +form_intro('Безопасность продукции', 'Материалы имеют сертификаты')
+                        +form_intro('Гарантийное и постгарантийное обслуживание', 'Гарантия на монтаж 3 года и гарантия на материал до 15 лет')
+        .product
+            .wrapper
+                .product_content
+                    .product_content-text
+                        .product_content-title Изготавливаем <br>мебель <span class="text_color">под заказ:
+                        .product_content-subtitle От заявки до поставки – от 3 дней 
+                    .product_content-form
+                        +form_product('img/product/fifth_product.png', 'Кухня', 'Кухонные столешницы, острова', 'Любой формы по вашим размерам и чертежам')
+                        +form_product('img/product/second_product.png', 'Лестницы', 'Лестницы', 'Долговечные лестницы из камня и дерева высокой прочности')
+                        +form_product('img/product/third_product.png', 'Подоконники и откосы', 'Подоконники и откосы', 'Износостойкие конструкции с гарантией 10 лет')
+                        +form_product('img/product/fourth_product.png', 'Кассовые /барные стойки/ресепшн','Кассовые /барные стойки/ ресепшн', 'Любой формы по вашим размерам и чертежам')
+                        +form_product('img/product/fifth_product.png', 'Душевые поддоны', 'Душевые поддоны', 'Любые размеры, формы и оттенки для малогабаритных санузлов')
+                        +form_product('img/product/sixth_product.png', 'Раковины и мойки', 'Раковины и мойки', 'Эргономичные и гигиеничные мойки в стиле вашего интерьера')
+                    .product_content-more
+                        a(href="#") Показать еще    
+     
+            

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="183" height="44" viewBox="0 0 183 44">
+  <g id="лого" transform="translate(-256 -9)">
+    <text id="STON" transform="translate(256 44)" fill="#ddd4cf" font-size="32" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">STON</tspan></text>
+    <g id="Сгруппировать_70" data-name="Сгруппировать 70">
+      <rect id="Прямоугольник_53" data-name="Прямоугольник 53" width="126" height="38" transform="translate(313 15)" fill="#fff"/>
+      <text id="STonline" transform="translate(262 44)" fill="#94796a" font-size="32" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">ST</tspan><tspan y="0" fill="#1c1515">ONline</tspan></text>
+    </g>
+  </g>
+</svg>
