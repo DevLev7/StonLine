@@ -1,0 +1,12 @@
+mixin form_intro(p1, p2)
+    .form_intro
+        .form_intro-text
+            .form_intro-title=p1
+            .form_intro-subtitle=p2
+mixin form_product(href, alt,p1, p2)
+    .form_product
+        img(src=href, alt=alt)
+        .form_product-title=p1
+        .form_product-subtitle=p2
+        button.btn 
+            span Заказать
