@@ -1152,6 +1152,9 @@ main{
             }
         .about{
             margin-top: -275px;
+            .wrapper{
+                padding: 0 7.8125%;
+            }
             .about_content{
                 margin: 0 75px 46.9px 75px;
                 .about_content-title{
@@ -1165,6 +1168,9 @@ main{
         } 
         .product {
             background: url(img/product/product_BG1024.svg);
+            .wrapper{
+                padding: 0 7.8125%;
+            }
             .product_content{
                 .product_content-title {
                     padding: 0;
@@ -1323,6 +1329,34 @@ main{
                     }
                 } 
             }
+    }
+    
+    @media (max-width: 768px){
+        .product{
+            .wrapper{
+                padding: 0 7.8125%;
+            }
+            .product_content{
+                .product_content-form {
+                    grid-template-columns: repeat(2, 303px);
+                    margin: 0 35px 0 50px;
+                }
+            }
+        }
+        
+        .about{
+            .wrapper{
+                padding: 0 7.8125%;
+            }
+            .about_content{
+                .about_content-form{
+                    grid-template-columns: repeat(2, 301px);
+                
+                } 
+            }
+        }   
+            
+        
     }
     
     @media(max-width: 500px){
