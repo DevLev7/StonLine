@@ -154,6 +154,7 @@ a{
 }
 
 main{
+    overflow: hidden;
     width: 100%;
     height: auto;
     background: url(img/bg_2650.png) no-repeat;
@@ -349,7 +350,9 @@ main{
     }
     
 .about{
+    overflow: hidden;
     margin-top: -200px;
+    padding-top: 5px;
     .about_content{
         margin: 0 0 46.9px 0;
         .about_content-title{
@@ -475,6 +478,7 @@ main{
 }
 
 .product{
+    overflow: hidden;
     background: url(img/product/product_BG2560.svg) no-repeat center;
     .product_content{
         padding: 0 80px;
@@ -902,9 +906,9 @@ main{
         } 
     }
     
-    @media(max-width: 1400px){
+    @media(max-width: 1440px){
         .wrapper{
-            padding: 0 (150/1920)*100%;
+            padding: 0 8.8%;
         }
         main{
             header{
@@ -1072,10 +1076,67 @@ main{
             }
         }
     }
-    @media(max-width: 1150px){
+    @media(max-width: 1151px){
         .wrapper{
             padding: 0 3.8125%;
             }
+            main{
+                
+                      .main__block{
+                        .main__block__text{
+                            .main__block__title{
+                                margin-bottom: 20px;
+                                h1{
+                                    @include font('Spectral SC',34px,40px,$base ,600 );
+                                }
+                                .style_text{
+                                    font-size: 20px;
+                                    margin-left: 1px;
+                                }
+                                
+                            }
+                            .main__block__subtitle{
+                                h5{
+                                    @include font('Gilroy',18px,20px,$base ,400 );
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                        .main__block__navigation{
+                            margin-top: 78px;
+                            nav{
+                                .nav-link{
+                                   .nav-link__title{
+                                        top: 45px;
+                                        left: 50px;
+                                        h6{
+                                            @include font('Gilroy',13px,21px,#B3998B ,400 );
+                                        }
+        
+                                   } 
+                                   .nav-link__number{  
+                                        bottom: 12%;
+                                        right: 49px;
+                                        h2{
+                                            @include font('GolosTextWebRegular',50px,111px,#DDD4CF ,400 );
+                                        }
+                                   }
+                                }
+                                .second{
+                                    margin-left: -75px;
+                                }
+                            }
+                        }
+                    }
+                    .arm{
+                        margin-left: -13px;
+                        margin-top: -118px;
+                        
+                        background-size: 100%;
+                       
+                    }
+                
+                }
         }
     @media(max-width: 1024px){
         main{
@@ -1112,31 +1173,6 @@ main{
                             h5{
                                 @include font('Gilroy',18px,20px,$base ,400 );
                                 margin-bottom: 15px;
-                            }
-                        }
-                    }
-                    .main__block__navigation{
-                        margin-top: 78px;
-                        nav{
-                            .nav-link{
-                               .nav-link__title{
-                                    top: 45px;
-                                    left: 50px;
-                                    h6{
-                                        @include font('Gilroy',13px,21px,#B3998B ,400 );
-                                    }
-    
-                               } 
-                               .nav-link__number{  
-                                    bottom: 12%;
-                                    right: 49px;
-                                    h2{
-                                        @include font('GolosTextWebRegular',50px,111px,#DDD4CF ,400 );
-                                    }
-                               }
-                            }
-                            .second{
-                                margin-left: -75px;
                             }
                         }
                     }
@@ -1449,13 +1485,13 @@ main{
             
             }
         .about{      
-            margin-top: -390px;
+            margin-top: -377px;
             .wrapper{
                 padding: 0 (4/500)*100%;
             }
             .about_content{
                 .about_content-title{
-                    @include font('Spectral SC', 33px, 20px, $black, 700);
+                    @include font('Spectral SC', 23px, 20px, $black, 700);
                 }
                 .about_content-form {
                     grid-template-columns: repeat(2, 240px);
@@ -1469,7 +1505,7 @@ main{
             background-size: cover;
             .product_content{
                 .product_content-title {
-                    @include font('Spectral SC', 20px, 18px, $black, 700);
+                    @include font('Spectral SC', 23px, 20px, $black, 700);
                     
                 }
                 .product_content-subtitle{
@@ -1489,10 +1525,9 @@ main{
         }
     }
     
+    @media(max-width: 415px){
     
-    @media(max-width: 361px){
         main{
-            background: url(img/bg_360.png) no-repeat;
             header{
                 .header-inner{
                     grid-template-columns:1.5fr 0.3fr ; 
@@ -1512,48 +1547,133 @@ main{
                     
                 }
             }
-                .main__block{
-                    margin-top: 50px;
-                    .main__block__text{
-                        width: 58%;
-                        .main__block__title{
-                            h1{
-                                @include font('Spectral SC',15px,22px,$base ,600 );
-                            }
-                            .style_text{
-                                font-size: 10px;
-                                margin-left: 3px;
-                            }
-                            
+            .main__block{
+                margin-top: 50px;
+                .main__block__text{
+                    width: 58%;
+                    .main__block__title{
+                        h1{
+                            @include font('Spectral SC',15px,22px,$base ,600 );
                         }
-                        .main__block__subtitle{
-                           
-                            h5{
-                                margin-left: 5px;
-                                @include font('Gilroy',12px,20px,$base ,400 );
+                        .style_text{
+                            font-size: 10px;
+                            margin-left: 3px;
+                        }
+                        
+                    }
+                    .main__block__subtitle{
+                       
+                        h5{
+                            margin-left: 5px;
+                            @include font('Gilroy',12px,20px,$base ,400 );
 
-                            }
-                        }
-                        .main__block__button{
-                            .btn-main{
-                                @include font('Gilroy',13px,21px,$white ,400 );
-                                padding: 8px 6px 8px 6px;
-                            }
                         }
                     }
-                    .main__block__navigation{
-                        margin-left: 0.125%;
-                        width: 36%;
-                        margin-top: -27px;
-
+                    .main__block__button{
+                        .btn-main{
+                            @include font('Gilroy',13px,21px,$white ,400 );
+                            padding: 8px 6px 8px 6px;
+                        }
                     }
                 }
-        .arm{
-            margin-left: -30px;
-            margin-top: -76px;
-            background-size: 40%;
+                .main__block__navigation{
+                    margin-left: 5.125%;
+                    width: 36%;
+                    margin-top: -27px;
 
+                }
+            }
+            .arm{
+                margin-left: -30px;
+                margin-top: -76px;
+                background-size: 60%;
+            
+            }
         }
+        .about{   
+            margin-top: -395px;
+            margin-bottom: 17px;
+            .wrapper{
+                padding: 0 5.625%;
+            }
+            .about_content{
+                margin: 0 0px 20.9px 0px;
+                .about_content-title{
+                    @include font('Spectral SC', 18px, 27px, $black, 700);
+                    padding: 0 0 20px 0;
+                }
+                .about_content-form {
+                    grid-template-columns: repeat(1, 300px);
+                    grid-template-rows: repeat(8, 1fr);
+                    grid-column-gap: 0px;
+                    grid-row-gap: 10px;
+                    margin: 0px 31px;
+                }
+            } 
+        }
+        .product{
+            padding-top: 13px;
+            background: url(img/product/product_BG550.svg) no-repeat center;
+            background-size: cover;
+            .wrapper {
+                padding: 1.8125%;
+            }
+            .product_content{
+                margin-top: -26px;
+                .product_content-title {
+                    @include font('Spectral SC', 18px, 25px, $black, 700);
+                }
+                .product_content-subtitle{
+                    @include font('Spectral SC', 12px, 20px, $black, 700);
+                    padding: 0 0 30px 0;
+                }
+                
+            } 
+        }
+    }
+    
+    @media (max-width: 376px){
+        .about{
+            .wrapper {
+                padding: 0px 2.625%;}
+}
+        .product{
+            .product_content{
+                .product_content-form{
+                    margin: 0 39px 0 68px;
+                }
+                
+            } 
+        }
+
+
+}
+    
+    @media(max-width: 361px){
+        main{
+            background: url(img/bg_360.png) no-repeat;
+            
+            .arm{
+                margin-left: -14px;
+                margin-top: -58px;
+                background-size: 40%;
+            
+            }
+    }
+    
+    
+    .product {
+        background: url(img/product/product_BG360.svg) no-repeat;
+        .wrapper{
+            padding: 0 6.625%;
+        }
+        .product_content{
+            padding: 0 0px;
+            margin: 0 0 0 0px;
+            .product_content-form {
+                margin: 0 0px 0 5px;
+            }
+        } 
     }
     
     .about{   
@@ -1563,37 +1683,35 @@ main{
         }
         .about_content{
             margin: 0 0px 20.9px 0px;
-            .about_content-title{
-                @include font('Spectral SC', 18px, 27px, $black, 700);
-                padding: 0 0 20px 0;
-            }
+
             .about_content-form {
-                grid-template-columns: repeat(1, 300px);
-                grid-template-rows: repeat(8, 1fr);
-                grid-column-gap: 0px;
-                grid-row-gap: 10px;
-                margin: 0 10px;
-            }
-        } 
-    } 
-    .product {
-        background: url(img/product/product_BG360.svg) no-repeat;
-        .wrapper{
-            padding: 0 6.625%;
-        }
-        .product_content{
-            padding: 0 0px;
-            margin: 0 0 0 0px;
-            .product_content-title {
-                @include font('Spectral SC', 18px, 27px, $black, 700);
-            }
-            .product_content-subtitle{
-                @include font('Spectral SC', 15px, 22px, $black, 700);
-                padding: 0 0 30px 0;
-            }
-            .product_content-form {
-                margin: 0 0px 0 5px;
+
+                margin: 0px 10px;
             }
         } 
     }
+    }
+    
+    @media (max-width: 321px){
+    main{
+        .main__block{
+            .main__block__navigation{
+                margin-left: 1.125%;
+               
+            }
+            
+        }
+    }
+    .about{
+        .wrapper {
+            padding: 0%;
+        }
+    }
+    .product{
+        background: url(img/product/product_BG320.svg) no-repeat;
+        .wrapper{
+            padding: 0%;
+        }
+    }
+    
     }
