@@ -924,6 +924,11 @@ main .animate__animated.animate__fadeInTopLeft {
     margin: 0 22px 0 22px;
   }
 }
+@media (max-width: 1150px) {
+  .wrapper {
+    padding: 0 3.8125%;
+  }
+}
 @media (max-width: 1024px) {
   main {
     background: url(img/фон.png) no-repeat;
