@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e15553d1-7cc5-44e1-851a-3bca09a0ad55"></script>
     <script src="script/wow.min.js"></script>
     <script src="script/app.js"></script>
+    <script src="script/slider.js"></script>
     <title>STONLine</title>
   </head>
   <body>
@@ -194,6 +201,7 @@
       </div>
     </div>
     <div class="product">
+      <div class="stown-flow"></div>
       <div class="wrapper">
         <div class="product_content">
           <div class="product_content-text">
@@ -232,9 +240,663 @@
               <button class="btn"> <span>Заказать</span></button>
             </div>
           </div>
-          <div class="product_content-more"><a href="#">Показать еще    </a></div>
+          <div class="product_content-more"><a href="#">Показать еще</a></div>
+        </div>
+      </div>
+      <div class="stown">
+        <div class="stown-block">
+          <div class="flower wow animate__animated animate__fadeInLeft"></div>
+          <div class="monument wow animate__animated animate__fadeInRight"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="advantages-block">
+      <div class="container">
+        <div class="advantages-block__inner">
+          <div class="advantages-block__text flex">
+            <div class="advantages-block__title">
+              <h1><span class="text_color"> Преимущества искусственного камня </span> над другими материалами</h1>
+            </div>
+            <div class="advantages-block__subtitle">
+              <h3>Идеально подходит для общественных мест, <span class="text_color"> а в домашних условиях служит еще дольше </span ></h3>
+            </div>
+          </div>
+          <div class="advantages-block__content flex">
+            <div class="advantages-block__content__text">
+              <h5 class="rest">Морозостойкий при облицовке фасада</h5>
+              <h5 class="rest">Стоит в 2 раза дешевле натурального камня</h5>
+              <h5 class="rest">Экологически безопасный материал</h5>
+              <h5 class="rest">Не вызывает аллергии</h5>
+              <h5 class="rest">Не ломается и не бледнеет</h5>
+            </div>
+            <div class="advantages-block__content__img"></div>
+            <div class="advantages-block__content__text">
+              <h5 class="rest">Не выгорает под солнцем</h5>
+              <h5 class="rest">Нет стыков на мебели - ее легко чистить</h5>
+              <h5 class="rest">Исключено развитие микробов, грибков и плесени</h5>
+              <h5 class="rest">Не впитывает загрязнители</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="palette">
+      <div class="wrapper">   
+        <div class="palette_content">   
+          <div class="palette_content-title">Палитра из <span> 1 000 +</span> <br> расцветок и фактур на выбор</div>
+          <div class="palette_content-manufacturer flex">
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-first.png" alt="palette_manufacturer-first"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-second.png" alt="palette_manufacturer-second"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-third.png" alt="palette_manufacturer-third"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-fourth.png" alt="palette_manufacturer-fourth"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-fifth.png" alt="palette_manufacturer-fifth"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-sixth.png" alt="palette_manufacturer-sixth"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-seventh.png" alt="palette_manufacturer-seventh"/></div>
+            <div class="manufacturer_form"> <img src="img/palette/palette_manufacturer/palette_manufacturer-eight.png" alt="palette_manufacturer-eight"/></div>
+          </div>
+          <div class="palette_content-views">
+            <div class="views_form">
+              <div class="views"><img src="img/palette/palette_views/Concerto.png" alt="Concerto"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/Desert Wind.png" alt="Desert Wind"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/Noir Concrete.png" alt="Noir Concrete"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/Odyssey.png" alt="Odyssey"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/Pastoral.png" alt="Pastoral"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/Rainier.png" alt="Rainier"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vb172_2.png" alt="vb172_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vc110_2.png" alt="vc110_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vc118_2.png" alt="vc118_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vd126_2.png" alt="vd126_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vd175_2.png" alt="vd175_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vl155_2.png" alt="vl155_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vm143_2.png" alt="vm143_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vn144_2.png" alt="vn144_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vo111_2.png" alt="vo111_2"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vo111_2.png" alt="vo111_2.png"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vo111_2.png" alt="vo111_2.png"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+              <div class="views"><img src="img/palette/palette_views/vo111_2.png" alt="vo111_2.png"/>
+                <div class="views_text">
+                  <div class="views_title">Supreme</div>
+                  <div class="views_subtitle">vc110_2</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider_pallete">
+              <input class="slider" type="range" value="20" min="0" max="100" name="rangeslider"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cost">  
+      <div class="wrapper">
+        <div class="cost_content">  
+          <div class="cost_content-title">Узнайте <span class="text_color">стоимость</span> <br>вашего изделия</div>
+          <div class="cost_content-form">
+            <div class="cost_form-product" id="table">
+              <div class="Dropdown">
+                <div class="title">Тип изделия:</div>
+                <div class="flex">
+                  <input type="text" placeholder="Выберите из списка..."/>
+                  <button class="btn_Dropdown" id="drodown1" onclick="dropdown()"></button>
+                </div>
+              </div>
+              <div class="formOf-type" id="form">
+                <div class="formOf_type-content"> 
+                  <div class="first_table">
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox1"/>
+                    <label for="typeOf_checkbox1">Кухонная столешница</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox2"/>
+                    <label for="typeOf_checkbox2">Остров</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox3"/>
+                    <label for="typeOf_checkbox3">Лестница</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox4"/>
+                    <label for="typeOf_checkbox4">Подоконники и откосы</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox5"/>
+                    <label for="typeOf_checkbox5">Кассовая /барная стойка</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox6"/>
+                    <label for="typeOf_checkbox6">Ресепшн</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox7"/>
+                    <label for="typeOf_checkbox7">Душевые поддоны</label>
+                  </div>
+                  <div class="second_table">
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox8"/>
+                    <label for="typeOf_checkbox8">Раковина/ мойка</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox9"/>
+                    <label for="typeOf_checkbox9">Фасад кухонный</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox10"/>
+                    <label for="typeOf_checkbox10">Панели радиаторов</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox11"/>
+                    <label for="typeOf_checkbox11">Дизайнерская мебель </label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox12"/>
+                    <label for="typeOf_checkbox12">Фасад здания</label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox13"/>
+                    <label for="typeOf_checkbox13">Отделка лифтовых проемов </label>
+                    <input class="typeOf_checkbox" type="checkbox" id="typeOf_checkbox14"/>
+                    <label for="typeOf_checkbox14">Полки, стеллажи</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="amount">
+                  <div class="title">Количество:</div>
+                  <div class="amount_value flex">
+                    <button class="btn_minus"><img src="img/cost/minus.svg" alt="minus"/></button>
+                    <div class="value" value="0">0</div>
+                    <button class="btn_plus"> <img src="img/cost/plus.svg" alt="plus"/></button>
+                  </div>
+                </div>
+                <div class="options">
+                  <div class="title">Параметры:</div>
+                  <input type="text" placeholder="Длина, высота, ширина..."/>
+                </div>
+              </div>
+              <div class="Dropdown">
+                <div class="title">Материал:</div>
+                <div class="flex">
+                  <input type="text" placeholder="Выберите из списка..."/>
+                  <button class="btn_Dropdown" id="drodown2" onclick="drodown2()"></button>
+                </div>
+              </div>
+              <div class="Deadline">  
+                <div class="title">Срок выполнения:</div>
+                <div class="Deadline_form flex">
+                  <div class="form" id="form1">
+                    <input class="custom_checkbox" type="checkbox" id="first_check" onchange="checkbox1()"/>
+                    <label for="first_check">1-4 рабочих дня <br> (экспресс)</label>
+                  </div>
+                  <div class="form" id="form2">
+                    <input class="custom_checkbox" type="checkbox" id="second_check" onchange="checkbox2()"/>
+                    <label for="second_check">до 10 рабочих дней <br> (стандарт)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="download flex">
+                <ul class="download_text">
+                  <li> Загрузите файл с чертежом будущего<br> изделия в удобном вам формате   </li>
+                </ul>
+                <input class="custom_checkbox" type="checkbox" id="third_check"/>
+                <label for="third_check">Нет чертежа</label>
+              </div>
+              <div class="curve flex">
+                <button class="btn-main"><span>Загрузить файл</span></button><img src="img/cost/curve.svg" alt=""/>
+                <ul class="curve_text">
+                  <li>Имя файла1</li>
+                </ul>
+                <ul class="curve_text">
+                  <li>Имя файла2</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cost_form-request">
+              <div class="form_request-title">Оставьте заявку <span class="light_text"><br>и получите расчет -</span>  <span class="text_color">со скидкой 10%</span> <br>за заказ с сайта
+                <div class="form">
+                  <div class="title">Ваше имя</div>
+                  <input class="person" type="text" placeholder="Иван"/>
+                </div>
+                <div class="form"> 
+                  <div class="title">Ваше номер телефона</div>
+                  <input class="phone" type="text" placeholder="+7 (___) ___ __ __"/>
+                </div>
+              </div>
+              <button class="btn-main"> <span>Оставить заявку</span></button>
+              <div class="cost_form-text">
+                <input class="cost_form-checkbox" type="checkbox" id="fourth_check"/>
+                <label for="fourth_check">Я даю свое согласие на обработку<br> персональных данных и соглашаюсь с <br><a href="">политикой конфиденциальности</a></label>
+              </div><img src="img/cost/number.png" alt="number"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="completedProject-block">
+      <div class="wrapper">
+        <div class="completedProject-block__inner">
+          <div class="completedProject-block__title">
+            <h1>Реализованные проекты</h1>
+          </div>
+          <div class="slider-project">
+            <div class="completedProject-block__card">
+              <div class="flex">
+                <div class="completedProject-block__card__photos">
+                  <div class="card__photo__item__1">
+                    <div class="card__photo"><img class="image" src="img/project/project_1.png" alt=""/></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__2">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__3">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__4">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                </div>
+                <div class="completedProject-block__card__info">
+                  <div class="card__info__navigation">
+                    <div class="card__info__navigation__number">
+                      <h2><span >01/</span> 19</h2>
+                    </div>
+                  </div>
+                  <div class="card__info__name">
+                    <h1>Столешница Г-образная</h1>
+                  </div>
+                  <div class="card__info__location flex">
+                    <div class="card__info__location__icon"><svg xmlns="http://www.w3.org/2000/svg" width="13.425" height="18" viewBox="0 0 13.425 18">
+  <path id="алрес" d="M44.459,0a6.721,6.721,0,0,0-6.712,6.715c0,5.517,6.044,10.9,6.3,11.13a.621.621,0,0,0,.822,0c.257-.227,6.3-5.613,6.3-11.13A6.721,6.721,0,0,0,44.459,0Zm0,4.83a1.885,1.885,0,1,1-1.865,1.885A1.877,1.877,0,0,1,44.459,4.83Z" transform="translate(-37.747)" fill="#8c8c8c"/>
+</svg>
+
+                    </div>
+                    <div class="card__info__location__text">
+                      <p>Раменский район, д. Мячково</p>
+                    </div>
+                  </div>
+                  <div class="card__info__options">
+                    <h5>Размер: <span> 2 800 х 1 100 мм </span></h5>
+                    <h5>Остров:  <span> 2 100 х 900 мм  ногами в пол подворот камня по всей длине кромки </span></h5>
+                  </div>
+                  <div class="card__info__price">
+                    <h2>175 000 ₽</h2>
+                  </div>
+                  <div class="card__info__btn">
+                    <button class="btn-main"><span> Хочу так же </span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="completedProject-block__card">
+              <div class="flex">
+                <div class="completedProject-block__card__photos">
+                  <div class="card__photo__item__1">
+                    <div class="card__photo"><img class="image" src="img/project/project_1.png" alt=""/></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__2">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__3">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                  <div class="card__photo__item__4">
+                    <div class="card__photo"></div>
+                    <div class="card__content"></div>
+                  </div>
+                </div>
+                <div class="completedProject-block__card__info">
+                  <div class="card__info__navigation">
+                    <div class="card__info__navigation__number">
+                      <h2><span >01/</span> 19</h2>
+                    </div>
+                  </div>
+                  <div class="card__info__name">
+                    <h1>Столешница Г-образная</h1>
+                  </div>
+                  <div class="card__info__location flex">
+                    <div class="card__info__location__icon"><svg xmlns="http://www.w3.org/2000/svg" width="13.425" height="18" viewBox="0 0 13.425 18">
+  <path id="алрес" d="M44.459,0a6.721,6.721,0,0,0-6.712,6.715c0,5.517,6.044,10.9,6.3,11.13a.621.621,0,0,0,.822,0c.257-.227,6.3-5.613,6.3-11.13A6.721,6.721,0,0,0,44.459,0Zm0,4.83a1.885,1.885,0,1,1-1.865,1.885A1.877,1.877,0,0,1,44.459,4.83Z" transform="translate(-37.747)" fill="#8c8c8c"/>
+</svg>
+
+                    </div>
+                    <div class="card__info__location__text">
+                      <p>Раменский район, д. Мячково</p>
+                    </div>
+                  </div>
+                  <div class="card__info__options">
+                    <h5>Размер: <span> 2 800 х 1 100 мм </span></h5>
+                    <h5>Остров:  <span> 2 100 х 900 мм  ногами в пол подворот камня по всей длине кромки </span></h5>
+                  </div>
+                  <div class="card__info__price">
+                    <h2>175 000 ₽</h2>
+                  </div>
+                  <div class="card__info__btn">
+                    <button class="btn-main"><span> Хочу так же </span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arm2 wow animate__animated animate__fadeInTopRight">                   </div>
+    </div>
+    <div class="talkAbout-block">
+      <div class="talkAbout-block__title">
+        <h1>Что говорят <br> о  нас <span class="text_color"> клиенты </span></h1>
+      </div>
+      <div class="talkAbout-block__slider"><div class=" gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell first_rev"></div>
+        <div class="gallery-cell second_rev"></div>
+        <div class="gallery-cell third_rev"></div></div>            
+      </div>
+    </div>
+    <div class="talkAbout-block__btn">
+      <button class="btn-main">Оставить отзыв</button>
+    </div>
+    <div class="prodaction-block">
+      <div class="wrapper">
+        <div class="prodaction-block__inner flex">
+          <div class="prodaction-block__info">
+            <div class="prodaction-block__title">
+              <h1>Собственное производство <span class="text_color"> без посредников  </span>                      </h1>
+            </div>
+            <div class="prodaction-block__text">
+              <p>Мы создаем дизайнерские изделия из искусственного камня под ключ. <span class="text_color"> Берем на себя весь процесс работы: от замера до монтажа на объекте.</span> Работаем без посредников и офисов, что позволяет нам сокращать затраты и предоставлять вам интерьерные решения по цене ниже рынка.</p><br>
+              <p>На производстве площадью 220 м² работают мастера со стажем от 10 лет. Они используют оборудование передовых брендов и технологии мировых производителей сырья. Коллектив уже реализовал 2 800+ коммерческих и частных проектов.</p>
+            </div>
+          </div>
+          <div class="prodaction-block__img1"><img src="img/prodaction/prod_1.png" alt="Изделие 1"/></div>
+          <div class="prodaction-block__img2"><img src="img/prodaction/prod_2.png" alt="Изделие 2"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="certificates-block">
+      <div class="wrapper">
+        <div class="certificates-block__title"> 
+          <h1>Сертификаты качества  </h1>
+        </div>
+        <div class="certificates-block__number">
+          <h2><span>01/</span> 21</h2>
+        </div>
+        <div class="slider">
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_1"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_2"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_3"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_4"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_1"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_2"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_3"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+          <div class="slick-slide">
+            <div class="sert__photo image_sert_4"></div>
+            <div class="sert__content"></div><a class="download" href="img/sertificate/sert_1.png" download=""><svg xmlns="http://www.w3.org/2000/svg" width="184" height="25.5" viewBox="0 0 184 25.5">
+  <g id="ссылка" transform="translate(-616 -9363.5)">
+    <path id="Icon_awesome-file-download" data-name="Icon awesome-file-download" d="M10.937,6.641V0H1.172A1.169,1.169,0,0,0,0,1.172V23.828A1.169,1.169,0,0,0,1.172,25H17.578a1.169,1.169,0,0,0,1.172-1.172V7.813H12.109A1.175,1.175,0,0,1,10.937,6.641Zm3.733,10.32L9.962,21.634a.833.833,0,0,1-1.174,0L4.081,16.961a.781.781,0,0,1,.549-1.336H7.813V11.719a.781.781,0,0,1,.781-.781h1.562a.781.781,0,0,1,.781.781v3.906H14.12A.781.781,0,0,1,14.67,16.961ZM18.408,5.127,13.628.342A1.171,1.171,0,0,0,12.8,0h-.3V6.25h6.25v-.3A1.168,1.168,0,0,0,18.408,5.127Z" transform="translate(616 9363.5)" fill="#6e8499"/>
+    <text id="Скачать_сертификат" data-name="Скачать сертификат" transform="translate(645.75 9382)" fill="#6e8499" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скачать сертификат</tspan></text>
+    <rect id="Прямоугольник_123" data-name="Прямоугольник 123" width="154" height="1" transform="translate(646 9388)" fill="#6e8499"/>
+  </g>
+</svg>
+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-block">       
+      <div class="services-block">
+        <div class="wrapper">
+          <div class="services-block__inner">
+            <div class="services-block__title">
+              <h1>Полный комплекс услуг</h1>
+            </div>
+            <div class="services-block__services flex">
+              <div class="service_1">
+                <div class="services__title">Доставка </div>
+                <div class="services__subtitle">Привезем и разгрузим готовые изделия на вашем объекте</div>
+              </div>
+              <div class="service_2">
+                <div class="services__title">Монтаж изделий на объекте</div>
+                <div class="services__subtitle">Установим мебель и научим правильно за ней ухаживать</div>
+              </div>
+              <div class="service_3">
+                <div class="services__title">Гарантийное и постгарантийное обслуживание</div>
+                <div class="services__subtitle">Отремонтируем и отполируем изделие до состояния нового</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="location-block">
+        <div class="location-block__title">
+          <h1>Как нас найти</h1>
+        </div>
+        <div class="location-block__content flex">
+          <div class="location-block__content__text">
+            <div class="content__text__contacts">
+              <h6>Контакты</h6>
+            </div>
+            <div class="content__text__address">
+              <p><span>  Адрес: </span> <br> Московская область, Раменский район, г. Бронницы, д. Рыболово, д. 258</p>
+            </div>
+            <div class="content__text__phone">
+              <div class="content__text__phone__icon"><svg id="телефон" xmlns="http://www.w3.org/2000/svg" width="184" height="34" viewBox="0 0 184 34">
+  <rect id="Прямоугольник_16" data-name="Прямоугольник 16" width="34" height="34" rx="10" fill="#6e8499"/>
+  <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt" d="M17.487,12.72l-3.938-1.688a.844.844,0,0,0-.984.243l-1.744,2.13A13.031,13.031,0,0,1,4.591,7.176l2.13-1.744a.842.842,0,0,0,.243-.984L5.277.51A.849.849,0,0,0,4.31.022L.654.865A.844.844,0,0,0,0,1.688,16.311,16.311,0,0,0,16.313,18a.844.844,0,0,0,.823-.654l.844-3.656a.854.854,0,0,0-.493-.97Z" transform="translate(8 8)" fill="#fff"/>
+  <g id="Компонент_1_28" data-name="Компонент 1 – 28" transform="translate(44 5)">
+    <text id="_8_495_226-08-66_" data-name="‌8‌ ‌(495)‌ ‌226-08-66‌" transform="translate(0 17)" fill="#1c1515" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">‌8‌ ‌(495)‌ ‌226-08-66‌</tspan></text>
+  </g>
+</svg>
+
+              </div>
+              <div class="content__text__phone__call">
+                <p>Заказать звонок</p>
+              </div>
+            </div>
+            <div class="content__text__work">
+              <p><span> Режим работы: </span> <br> пн-вс: с 8:00 до 20:00 (без выходных)</p>
+            </div>
+            <div class="content__text__email flex">
+              <div class="content__text__email__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="11.603" viewBox="0 0 18 11.603">
+  <g id="mail_1_" data-name="mail (1)" transform="translate(0 -91)">
+    <g id="Сгруппировать_6" data-name="Сгруппировать 6" transform="translate(0 91.736)">
+      <g id="Сгруппировать_5" data-name="Сгруппировать 5">
+        <path id="Контур_27" data-name="Контур 27" d="M17.75,111.933l-8.434,6.541a.526.526,0,0,1-.632,0L.25,111.933a1.568,1.568,0,0,0-.25.846v8.438A1.584,1.584,0,0,0,1.582,122.8H16.418A1.584,1.584,0,0,0,18,121.217v-8.438A1.568,1.568,0,0,0,17.75,111.933Z" transform="translate(0 -111.933)" fill="#1c1515"/>
+      </g>
+    </g>
+    <g id="Сгруппировать_8" data-name="Сгруппировать 8" transform="translate(1.119 91)">
+      <g id="Сгруппировать_7" data-name="Сгруппировать 7">
+        <path id="Контур_28" data-name="Контур 28" d="M47.115,91H32.279a1.56,1.56,0,0,0-.463.077L39.7,97.2l7.881-6.119A1.56,1.56,0,0,0,47.115,91Z" transform="translate(-31.816 -91)" fill="#1c1515"/>
+      </g>
+    </g>
+  </g>
+</svg>
+
+              </div>
+              <div class="content__text__email__name">
+                <p>info@stonline.ru</p>
+              </div>
+            </div>
+          </div>
+          <div class="location-block__content__map">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="application">
+      <div class="wrapper">
+        <div class="application_table">
+          <div class="application_table-measurer">
+            <div class="table_measurer-title">Закажите выезд <br> замерщика <br> на объект <span class="text_color">бесплатно</div>
+            <div class="table_measurer-text">
+              <div class="text_phone">Мы обсудим по телефону вашу идею и пожелания</div>
+              <div class="text_car">Специалист выедет к вам с образцами материалов на выбор и осуществит замеры бесплатно</div><img src="img/footer/men.png" alt="men"/>
+            </div><img src="img/footer/figure.png" alt="figure"/>
+          </div>
+          <div class="application_table-form">
+            <div class="table_form-title">Оставьте заявку <br><span class="light_text">и получите расчет –</span> <span class="semibold_text">со скидкой 10% <br>за заказ с сайта</div>
+            <div class="application_form">
+              <div class="title">Ваше имя</div>
+              <input class="person" type="text" placeholder="Иван"/>
+            </div>
+            <div class="application_form"> 
+              <div class="title">Ваше номер телефона</div>
+              <input class="phone" type="text" placeholder="+7 (___) ___ __ __"/>
+            </div>
+            <button class="btn-main"><span>Оставить заявку</span></button>
+            <div class="table_form-text">
+              <input class="cost_form-checkbox" type="checkbox" id="fifth_check"/>
+              <label for="fifth_check">Я даю свое согласие на обработку<br> персональных данных и соглашаюсь с <br></label><a href="">политикой конфиденциальности</a>
+            </div><img src="img/footer/list.png" alt="list"/>
+          </div>
+        </div>
+        <div class="footer flex">
+          <div class="footer_title"><img class="footer_logo" src="img/лого.svg" alt="лого"/><a href="">Политика конфиденциальности</a></div><img class="footer_hand" src="img/footer/hand.png" alt="hand"/>
+          <div class="footer_subtitle"><img src="img/phone.svg" alt=""/><a href="">Сделанов в B2B</a>
+            <!--iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad7829ed22bb103c02cd8477f807d4ca021aa243152de68f24dc7638efda3cd39&amp;source=constructor" width="1184" height="547" frameborder="0")-->
+          </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="script/slick.js"></script>
+  <script src="script/icon_customImage.js"></script>
+  <script src="script/script.js"></script>
 </html>

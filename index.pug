@@ -4,10 +4,17 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="style.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+        link(rel="stylesheet", href="style.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js")
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e15553d1-7cc5-44e1-851a-3bca09a0ad55")
         script(src="script/wow.min.js")
         script(src="script/app.js")
+        script(src="script/slider.js")
         title STONLine
     body
         main
@@ -89,6 +96,7 @@ html(lang="en")
                         +form_intro('Безопасность продукции', 'Материалы имеют сертификаты')
                         +form_intro('Гарантийное и постгарантийное обслуживание', 'Гарантия на монтаж 3 года и гарантия на материал до 15 лет')
         .product
+            .stown-flow
             .wrapper
                 .product_content
                     .product_content-text
@@ -102,6 +110,327 @@ html(lang="en")
                         +form_product('img/product/fifth_product.png', 'Душевые поддоны', 'Душевые поддоны', 'Любые размеры, формы и оттенки для малогабаритных санузлов')
                         +form_product('img/product/sixth_product.png', 'Раковины и мойки', 'Раковины и мойки', 'Эргономичные и гигиеничные мойки в стиле вашего интерьера')
                     .product_content-more
-                        a(href="#") Показать еще    
-     
-            
+                        a(href="#") Показать еще
+            .stown
+                .stown-block
+                    .flower.wow.animate__animated.animate__fadeInLeft
+                    .monument.wow.animate__animated.animate__fadeInRight 
+        .advantages-block
+            .container
+                .advantages-block__inner
+                    .advantages-block__text.flex
+                        .advantages-block__title
+                            h1 <span class="text_color"> Преимущества искусственного камня </span> над другими материалами
+                        .advantages-block__subtitle
+                            h3 Идеально подходит для общественных мест, <span class="text_color"> а в домашних условиях служит еще дольше </span >
+                    .advantages-block__content.flex
+                        .advantages-block__content__text
+                            h5.rest Морозостойкий при облицовке фасада
+                            h5.rest Стоит в 2 раза дешевле натурального камня
+                            h5.rest Экологически безопасный материал
+                            h5.rest Не вызывает аллергии
+                            h5.rest Не ломается и не бледнеет
+                        .advantages-block__content__img
+                        .advantages-block__content__text
+                            h5.rest Не выгорает под солнцем
+                            h5.rest Нет стыков на мебели - ее легко чистить
+                            h5.rest Исключено развитие микробов, грибков и плесени
+                            h5.rest Не впитывает загрязнители
+        .palette
+            .wrapper    
+                .palette_content    
+                    .palette_content-title Палитра из <span> 1 000 +</span> <br> расцветок и фактур на выбор
+                    .palette_content-manufacturer.flex
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-first.png', 'palette_manufacturer-first')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-second.png', 'palette_manufacturer-second')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-third.png', 'palette_manufacturer-third')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-fourth.png', 'palette_manufacturer-fourth')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-fifth.png', 'palette_manufacturer-fifth')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-sixth.png', 'palette_manufacturer-sixth')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-seventh.png', 'palette_manufacturer-seventh')
+                        +palette_content-manufacturer('img/palette/palette_manufacturer/palette_manufacturer-eight.png', 'palette_manufacturer-eight')
+                    .palette_content-views
+                        .views_form
+                            +palette_content-views('img/palette/palette_views/Concerto.png', 'Concerto', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/Desert Wind.png', 'Desert Wind', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/Noir Concrete.png', 'Noir Concrete', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/Odyssey.png', 'Odyssey', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/Pastoral.png', 'Pastoral', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/Rainier.png', 'Rainier', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vb172_2.png', 'vb172_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vc110_2.png', 'vc110_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vc118_2.png', 'vc118_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vd126_2.png', 'vd126_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vd175_2.png', 'vd175_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vl155_2.png', 'vl155_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vm143_2.png', 'vm143_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vn144_2.png', 'vn144_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vo111_2.png', 'vo111_2', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vo111_2.png', 'vo111_2.png', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vo111_2.png', 'vo111_2.png', 'Supreme', 'vc110_2')
+                            +palette_content-views('img/palette/palette_views/vo111_2.png', 'vo111_2.png', 'Supreme', 'vc110_2')
+                        .slider_pallete
+                            input(type="range" class="slider" value="20" min="0" max="100" name="rangeslider")
+        .cost   
+            .wrapper
+                .cost_content   
+                    .cost_content-title Узнайте <span class="text_color">стоимость</span> <br>вашего изделия
+                    .cost_content-form
+                        .cost_form-product(id="table")
+                            +Dropdown('Тип изделия:', 'Выберите из списка...', 'drodown1', 'dropdown()')
+                            +formOfType()
+                            .flex
+                                +amount('Количество:', '0', 'img/cost/minus.svg', 'img/cost/plus.svg')
+                                +options('Параметры:', 'Длина, высота, ширина...')
+                            +Dropdown('Материал:', 'Выберите из списка...', 'drodown2', 'drodown2()')
+                            +Deadline('Срок выполнения:')
+                            +download()
+                            +curve()
+                        .cost_form-request
+                            .form_request-title Оставьте заявку <span class="light_text"><br>и получите расчет -</span>  <span class="text_color">со скидкой 10%</span> <br>за заказ с сайта
+                                .form
+                                    .title Ваше имя
+                                    input(type="text" placeholder="Иван" class="person")
+                                .form 
+                                    .title Ваше номер телефона
+                                    input(type="text" placeholder="+7 (___) ___ __ __" class="phone")
+                            button.btn-main 
+                                span Оставить заявку
+                            .cost_form-text
+                                input(type="checkbox" class="cost_form-checkbox" id="fourth_check")
+                                label(for="fourth_check") Я даю свое согласие на обработку<br> персональных данных и соглашаюсь с <br>
+                                    a(href="") политикой конфиденциальности
+                            img(src="img/cost/number.png", alt="number")
+        .completedProject-block
+            .wrapper
+                .completedProject-block__inner
+                    .completedProject-block__title
+                        h1 Реализованные проекты
+                    .slider-project
+                        .completedProject-block__card
+                            .flex
+                                .completedProject-block__card__photos
+                                    .card__photo__item__1
+                                        .card__photo
+                                            img.image(src="img/project/project_1.png", alt="")
+                                        .card__content
+                                    .card__photo__item__2
+                                        .card__photo
+                                        .card__content
+                                    .card__photo__item__3
+                                        .card__photo
+                                        .card__content
+                                    .card__photo__item__4
+                                        .card__photo
+                                        .card__content
+                                .completedProject-block__card__info
+                                    .card__info__navigation
+                                        .card__info__navigation__number
+                                            h2 <span >01/</span> 19
+                                        //- .card__info__navigation__arrow
+                                        //-     a.arrow.left
+                                        //-         include img/project/arrow_left.svg
+                                        //-     a.arrow
+                                        //-         include img/project/arrow_right.svg
+                                    .card__info__name
+                                        h1 Столешница Г-образная
+                                    .card__info__location.flex
+                                        .card__info__location__icon
+                                            include img/project/loc.svg
+                                        .card__info__location__text
+                                            p Раменский район, д. Мячково
+                                    .card__info__options
+                                        h5 Размер: <span> 2 800 х 1 100 мм </span>
+                                        h5 Остров:  <span> 2 100 х 900 мм  ногами в пол подворот камня по всей длине кромки </span>
+                                    .card__info__price
+                                        h2 175 000 ₽
+                                    .card__info__btn
+                                        button.btn-main <span> Хочу так же </span>
+                        .completedProject-block__card
+                            .flex
+                                .completedProject-block__card__photos
+                                    .card__photo__item__1
+                                        .card__photo
+                                            img.image(src="img/project/project_1.png", alt="")
+                                        .card__content
+                                    .card__photo__item__2
+                                        .card__photo
+                                        .card__content
+                                    .card__photo__item__3
+                                        .card__photo
+                                        .card__content
+                                    .card__photo__item__4
+                                        .card__photo
+                                        .card__content
+                                .completedProject-block__card__info
+                                    .card__info__navigation
+                                        .card__info__navigation__number
+                                            h2 <span >01/</span> 19
+                                        //- .card__info__navigation__arrow
+                                        //-     a.arrow.left.slick-prev
+                                        //-         include img/project/arrow_left.svg
+                                        //-     a.arrow.slick-next
+                                        //-         include img/project/arrow_right.svg
+                                    .card__info__name
+                                        h1 Столешница Г-образная
+                                    .card__info__location.flex
+                                        .card__info__location__icon
+                                            include img/project/loc.svg
+                                        .card__info__location__text
+                                            p Раменский район, д. Мячково
+                                    .card__info__options
+                                        h5 Размер: <span> 2 800 х 1 100 мм </span>
+                                        h5 Остров:  <span> 2 100 х 900 мм  ногами в пол подворот камня по всей длине кромки </span>
+                                    .card__info__price
+                                        h2 175 000 ₽
+                                    .card__info__btn
+                                        button.btn-main <span> Хочу так же </span>
+            .arm2.wow.animate__animated.animate__fadeInTopRight                    
+        .talkAbout-block
+            .talkAbout-block__title
+                h1 Что говорят <br> о  нас <span class="text_color"> клиенты </span>
+            .talkAbout-block__slider
+                <div class=" gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    .gallery-cell.first_rev
+                    .gallery-cell.second_rev
+                    .gallery-cell.third_rev
+                </div>            
+        .talkAbout-block__btn
+            button.btn-main Оставить отзыв
+        .prodaction-block
+            .wrapper
+                .prodaction-block__inner.flex
+                    .prodaction-block__info
+                        .prodaction-block__title
+                            h1 Собственное производство <span class="text_color"> без посредников  </span>                      
+                        .prodaction-block__text
+                            p Мы создаем дизайнерские изделия из искусственного камня под ключ. <span class="text_color"> Берем на себя весь процесс работы: от замера до монтажа на объекте.</span> Работаем без посредников и офисов, что позволяет нам сокращать затраты и предоставлять вам интерьерные решения по цене ниже рынка.
+                            <br>
+                            p На производстве площадью 220 м² работают мастера со стажем от 10 лет. Они используют оборудование передовых брендов и технологии мировых производителей сырья. Коллектив уже реализовал 2 800+ коммерческих и частных проектов.
+                    .prodaction-block__img1
+                        img(src="img/prodaction/prod_1.png", alt="Изделие 1")
+                    .prodaction-block__img2
+                        img(src="img/prodaction/prod_2.png", alt="Изделие 2")
+        .certificates-block
+            .wrapper
+                .certificates-block__title 
+                    h1 Сертификаты качества  
+                .certificates-block__number
+                    h2 <span>01/</span> 21
+                .slider
+                    .slick-slide
+                        .sert__photo.image_sert_1
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_2
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_3
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_4
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_1
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_2
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_3
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+                    .slick-slide
+                        .sert__photo.image_sert_4
+                        .sert__content
+                        a( href="img/sertificate/sert_1.png" download="").download
+                            include img/sertificate/download.svg
+        .info-block        
+            .services-block
+                .wrapper
+                    .services-block__inner
+                        .services-block__title
+                            h1 Полный комплекс услуг
+                        .services-block__services.flex
+                            .service_1
+                                .services__title Доставка 
+                                .services__subtitle Привезем и разгрузим готовые изделия на вашем объекте
+                            .service_2
+                                .services__title Монтаж изделий на объекте
+                                .services__subtitle Установим мебель и научим правильно за ней ухаживать
+                            .service_3
+                                .services__title Гарантийное и постгарантийное обслуживание
+                                .services__subtitle Отремонтируем и отполируем изделие до состояния нового
+            .location-block
+                .location-block__title
+                    h1 Как нас найти
+                .location-block__content.flex
+                    .location-block__content__text
+                        .content__text__contacts
+                            h6 Контакты
+                        .content__text__address
+                            p <span>  Адрес: </span> <br> Московская область, Раменский район, г. Бронницы, д. Рыболово, д. 258
+                        .content__text__phone
+                            .content__text__phone__icon
+                                include img/phone.svg
+                            .content__text__phone__call
+                                p Заказать звонок
+                        .content__text__work
+                            p <span> Режим работы: </span> <br> пн-вс: с 8:00 до 20:00 (без выходных)
+                        .content__text__email.flex
+                            .content__text__email__icon
+                                include img/location/mail.svg
+                            .content__text__email__name
+                                p info@stonline.ru
+                    .location-block__content__map
+                        #map
+        .application
+            .wrapper
+                .application_table
+                    .application_table-measurer
+                        .table_measurer-title Закажите выезд <br> замерщика <br> на объект <span class="text_color">бесплатно
+                        .table_measurer-text
+                            .text_phone Мы обсудим по телефону вашу идею и пожелания
+                            .text_car Специалист выедет к вам с образцами материалов на выбор и осуществит замеры бесплатно
+                            img(src="img/footer/men.png", alt="men")
+                        img(src="img/footer/figure.png", alt="figure")
+                    .application_table-form
+                        .table_form-title Оставьте заявку <br><span class="light_text">и получите расчет –</span> <span class="semibold_text">со скидкой 10% <br>за заказ с сайта
+                        .application_form
+                            .title Ваше имя
+                            input(type="text" placeholder="Иван" class="person")
+                        .application_form 
+                            .title Ваше номер телефона
+                            input(type="text" placeholder="+7 (___) ___ __ __" class="phone")
+                        button.btn-main
+                            span Оставить заявку
+                        .table_form-text
+                            input(type="checkbox" class="cost_form-checkbox" id="fifth_check")
+                            label(for="fifth_check") Я даю свое согласие на обработку<br> персональных данных и соглашаюсь с <br>
+                            a(href="") политикой конфиденциальности
+                        img(src="img/footer/list.png", alt="list")
+                .footer.flex
+                    .footer_title
+                        img(src="img/лого.svg", alt="лого").footer_logo
+                        a(href="") Политика конфиденциальности
+                    img(src="img/footer/hand.png", alt="hand").footer_hand
+                    .footer_subtitle
+                        img(src="img/phone.svg", alt="")
+                        a(href="") Сделанов в B2B
+                        //iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad7829ed22bb103c02cd8477f807d4ca021aa243152de68f24dc7638efda3cd39&amp;source=constructor" width="1184" height="547" frameborder="0")
+    script(src="script/slick.js")
+    script(src="script/icon_customImage.js")
+    script(src="script/script.js")

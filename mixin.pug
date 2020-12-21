@@ -10,3 +10,93 @@ mixin form_product(href, alt,p1, p2)
         .form_product-subtitle=p2
         button.btn 
             span Заказать
+mixin palette_content-manufacturer(src, alt)
+    .manufacturer_form  
+        img(src=src, alt=alt)
+mixin palette_content-views(img, alt, title, subtitle )
+    .views
+        img(src=img, alt=alt)
+        .views_text
+            .views_title=title
+            .views_subtitle=subtitle
+mixin Dropdown(title, placeholder, drodown, onchange)
+    .Dropdown
+        .title=title
+        .flex
+            input(type="text" placeholder=placeholder)
+            button(class="btn_Dropdown" id=drodown onclick=onchange)
+mixin amount(title, value, minus, plus)
+    .amount
+        .title=title
+        .amount_value.flex
+            button(class="btn_minus")
+                img(src=minus, alt="minus")
+            .value(value="0")=value
+            button(class="btn_plus") 
+                img(src=plus, alt="plus")
+mixin options(title, placeholder)
+    .options
+        .title=title
+        input(type="text" placeholder=placeholder)
+mixin Deadline(title)
+    .Deadline   
+        .title=title     
+        .Deadline_form.flex
+            .form(id="form1")
+                input(type="checkbox" class="custom_checkbox" id="first_check" onchange="checkbox1()")
+                label(for="first_check") 1-4 рабочих дня <br> (экспресс)
+            .form(id="form2")
+                input(type="checkbox" class="custom_checkbox" id="second_check" onchange="checkbox2()")
+                label(for="second_check") до 10 рабочих дней <br> (стандарт)
+mixin download()
+    .download.flex
+        ul.download_text
+            li  Загрузите файл с чертежом будущего<br> изделия в удобном вам формате   
+        input(type="checkbox" class="custom_checkbox" id="third_check")
+        label(for="third_check") Нет чертежа
+mixin curve()
+    .curve.flex
+        button.btn-main
+            span Загрузить файл
+        img(src="img/cost/curve.svg", alt="")
+        ul.curve_text
+            li Имя файла1
+        ul.curve_text
+            li Имя файла2
+mixin form(title, placeholder)
+    .form
+        .title=title
+        input(type="text" placeholder=placeholder)
+mixin formOfType ()
+    .formOf-type(id="form")
+        .formOf_type-content 
+            .first_table
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox1")
+                    label(for="typeOf_checkbox1") Кухонная столешница
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox2")
+                    label(for="typeOf_checkbox2") Остров
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox3")
+                    label(for="typeOf_checkbox3") Лестница
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox4")
+                    label(for="typeOf_checkbox4") Подоконники и откосы
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox5")
+                    label(for="typeOf_checkbox5") Кассовая /барная стойка
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox6")
+                    label(for="typeOf_checkbox6") Ресепшн
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox7")
+                    label(for="typeOf_checkbox7") Душевые поддоны
+            .second_table
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox8")
+                    label(for="typeOf_checkbox8") Раковина/ мойка
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox9")
+                    label(for="typeOf_checkbox9") Фасад кухонный
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox10")
+                    label(for="typeOf_checkbox10") Панели радиаторов
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox11")
+                    label(for="typeOf_checkbox11") Дизайнерская мебель 
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox12")
+                    label(for="typeOf_checkbox12") Фасад здания
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox13")
+                    label(for="typeOf_checkbox13") Отделка лифтовых проемов 
+                    input(type="checkbox" class="typeOf_checkbox" id="typeOf_checkbox14")
+                    label(for="typeOf_checkbox14") Полки, стеллажи
