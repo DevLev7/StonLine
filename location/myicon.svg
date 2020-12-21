@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="242" height="110.457" viewBox="0 0 242 110.457">
+  <defs>
+    <filter id="location-pin" x="0" y="0" width="86.955" height="110.457" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="всалывашка_на_карте" data-name="всалывашка на карте" transform="translate(-1221 -10670)">
+    <rect id="Прямоугольник_156" data-name="Прямоугольник 156" width="203" height="92" rx="10" transform="translate(1260 10676)" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, 1221, 10670)" filter="url(#location-pin)">
+      <path id="location-pin-2" data-name="location-pin" d="M72.225,0A34.523,34.523,0,0,0,37.747,34.491c0,28.337,31.046,56.005,32.368,57.169a3.192,3.192,0,0,0,4.22,0C75.656,90.5,106.7,62.829,106.7,34.492A34.524,34.524,0,0,0,72.225,0Z" transform="translate(-28.75 6)" fill="#94796a"/>
+    </g>
+    <text id="S" transform="translate(1265 10738)" fill="#f3f0ef" font-size="56" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.695" y="0">S</tspan></text>
+    <text id="GPS_координаты_55_399100_38.3656000" data-name="GPS координаты
+55,399100,38.3656000" transform="translate(1306.375 10705)" fill="#1c1515" font-size="14" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">GPS координаты</tspan><tspan font-family="SegoeUI, Segoe UI" font-weight="400"><tspan x="0" y="22">55,399100,38.3656000</tspan></tspan></text>
+    <path id="Icon_material-close" data-name="Icon material-close" d="M17.5,8.507,16.493,7.5,12.5,11.493,8.507,7.5,7.5,8.507,11.493,12.5,7.5,16.493,8.507,17.5,12.5,13.507,16.493,17.5,17.5,16.493,13.507,12.5Z" transform="translate(1439.5 10675.02)" fill="#a8a8a8"/>
+    <g id="ссылка">
+      <text id="Скопировать" transform="translate(1306.375 10749)" fill="#6e8499" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Скопировать</tspan></text>
+      <rect id="Прямоугольник_234" data-name="Прямоугольник 234" width="87" height="1" transform="translate(1306.461 10754)" fill="#6e8499"/>
+    </g>
+  </g>
+</svg>
